@@ -42,10 +42,11 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Cascadia Mono", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(241, 57);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(99, 30);
+            label1.Size = new Size(117, 29);
             label1.TabIndex = 0;
             label1.Text = "Registro";
             label1.Click += label1_Click;
@@ -53,7 +54,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(91, 121);
+            label2.Location = new Point(105, 124);
             label2.Name = "label2";
             label2.Size = new Size(61, 30);
             label2.TabIndex = 1;
@@ -123,6 +124,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(628, 395);
             Controls.Add(maskedTextBox1);
             Controls.Add(button2);
