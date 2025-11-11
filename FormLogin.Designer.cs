@@ -62,8 +62,9 @@
             // 
             // txtcontraseña
             // 
-            txtcontraseña.Location = new Point(173, 269);
+            txtcontraseña.Location = new Point(173, 265);
             txtcontraseña.Name = "txtcontraseña";
+            txtcontraseña.PasswordChar = '*';
             txtcontraseña.Size = new Size(137, 23);
             txtcontraseña.TabIndex = 2;
             // 
