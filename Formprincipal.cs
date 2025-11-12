@@ -12,12 +12,12 @@ namespace Proyectosucursales_Grupo4
 
         }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void Label5_Click(object sender, EventArgs e)
         {
 
         }
@@ -27,12 +27,12 @@ namespace Proyectosucursales_Grupo4
             // Aquí puedes agregar la lógica que desees ejecutar cuando cambie el texto de textBox4
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }
@@ -47,32 +47,32 @@ namespace Proyectosucursales_Grupo4
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void Label10_Click(object sender, EventArgs e)
         {
             // Aquí puede agregar la lógica que desee ejecutar cuando se haga clic en label10.
         }
 
-        private void label13_Click(object sender, EventArgs e)
+        private void Label13_Click(object sender, EventArgs e)
         {
             // Aquí puede agregar la lógica que desee ejecutar al hacer clic en label13.
         }
 
-        private void label17_Click(object sender, EventArgs e)
+        private void Label17_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label18_Click(object sender, EventArgs e)
+        private void Label18_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
+        private void TabPage1_Click(object sender, EventArgs e)
         {
 
         }
@@ -82,7 +82,7 @@ namespace Proyectosucursales_Grupo4
             // Aquí puede agregar la lógica que desee ejecutar cuando cambie el texto de textBox6.
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             Close();
         }

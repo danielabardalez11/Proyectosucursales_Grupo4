@@ -35,7 +35,7 @@
             pictureBox1 = new PictureBox();
             maskedTextBox1 = new MaskedTextBox();
             btningresar = new Button();
-            btnsalir = new Button();
+            btncancelar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -94,15 +94,17 @@
             btningresar.TabIndex = 6;
             btningresar.Text = "Ingresar";
             btningresar.UseVisualStyleBackColor = true;
+            btningresar.Click += Btningresar_Click;
             // 
-            // btnsalir
+            // btncancelar
             // 
-            btnsalir.Location = new Point(173, 326);
-            btnsalir.Name = "btnsalir";
-            btnsalir.Size = new Size(75, 23);
-            btnsalir.TabIndex = 7;
-            btnsalir.Text = "Salir";
-            btnsalir.UseVisualStyleBackColor = true;
+            btncancelar.Location = new Point(173, 326);
+            btncancelar.Name = "btncancelar";
+            btncancelar.Size = new Size(75, 23);
+            btncancelar.TabIndex = 7;
+            btncancelar.Text = "Cancelar";
+            btncancelar.UseVisualStyleBackColor = true;
+            btncancelar.Click += Btncancelar_Click;
             // 
             // FormLogin
             // 
@@ -110,7 +112,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LightSteelBlue;
             ClientSize = new Size(333, 371);
-            Controls.Add(btnsalir);
+            Controls.Add(btncancelar);
             Controls.Add(btningresar);
             Controls.Add(maskedTextBox1);
             Controls.Add(pictureBox1);
@@ -119,6 +121,7 @@
             Controls.Add(lblcuil);
             Name = "FormLogin";
             Text = "FormLogin";
+            Load += FormLogin_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -132,6 +135,6 @@
         private PictureBox pictureBox1;
         private MaskedTextBox maskedTextBox1;
         private Button btningresar;
-        private Button btnsalir;
+        private Button btncancelar;
     }
 }
