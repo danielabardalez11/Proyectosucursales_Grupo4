@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registroform));
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox3 = new TextBox();
+            txtContrasena = new TextBox();
+            txtRepetirContrasena = new TextBox();
             label4 = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            maskedTextBox1 = new MaskedTextBox();
+            btnRegistrar = new Button();
+            btnVolverlogin = new Button();
+            mtbCuil = new MaskedTextBox();
+            btnVercontrasena = new Button();
+            btnVerRepetir = new Button();
             SuspendLayout();
             // 
             // label1
@@ -69,69 +72,95 @@
             label3.TabIndex = 2;
             label3.Text = "Contraseña";
             // 
-            // textBox1
+            // txtContrasena
             // 
-            textBox1.Location = new Point(278, 179);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(321, 37);
-            textBox1.TabIndex = 3;
-            textBox1.UseSystemPasswordChar = true;
+            txtContrasena.Location = new Point(278, 179);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.PlaceholderText = "Ingrese contraseña";
+            txtContrasena.Size = new Size(259, 37);
+            txtContrasena.TabIndex = 3;
+            txtContrasena.UseSystemPasswordChar = true;
             // 
-            // textBox3
+            // txtRepetirContrasena
             // 
-            textBox3.Location = new Point(278, 231);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(321, 37);
-            textBox3.TabIndex = 6;
-            textBox3.UseSystemPasswordChar = true;
+            txtRepetirContrasena.Location = new Point(278, 241);
+            txtRepetirContrasena.Name = "txtRepetirContrasena";
+            txtRepetirContrasena.PlaceholderText = "Repita contraseña";
+            txtRepetirContrasena.Size = new Size(259, 37);
+            txtRepetirContrasena.TabIndex = 6;
+            txtRepetirContrasena.UseSystemPasswordChar = true;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(23, 234);
+            label4.Location = new Point(23, 244);
             label4.Name = "label4";
             label4.Size = new Size(240, 30);
             label4.TabIndex = 5;
             label4.Text = "Confirmar Contraseña";
             // 
-            // button1
+            // btnRegistrar
             // 
-            button1.Location = new Point(120, 311);
-            button1.Name = "button1";
-            button1.Size = new Size(131, 41);
-            button1.TabIndex = 7;
-            button1.Text = "Registrar";
-            button1.UseVisualStyleBackColor = true;
+            btnRegistrar.Location = new Point(120, 311);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(131, 41);
+            btnRegistrar.TabIndex = 7;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
-            // button2
+            // btnVolverlogin
             // 
-            button2.Location = new Point(344, 311);
-            button2.Name = "button2";
-            button2.Size = new Size(176, 41);
-            button2.TabIndex = 8;
-            button2.Text = "Volver al login";
-            button2.UseVisualStyleBackColor = true;
+            btnVolverlogin.Location = new Point(344, 311);
+            btnVolverlogin.Name = "btnVolverlogin";
+            btnVolverlogin.Size = new Size(176, 41);
+            btnVolverlogin.TabIndex = 8;
+            btnVolverlogin.Text = "Volver al login";
+            btnVolverlogin.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox1
+            // mtbCuil
             // 
-            maskedTextBox1.Location = new Point(278, 121);
-            maskedTextBox1.Mask = "00-00000000-0";
-            maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(146, 37);
-            maskedTextBox1.TabIndex = 9;
+            mtbCuil.Location = new Point(278, 121);
+            mtbCuil.Mask = "00-00000000-0";
+            mtbCuil.Name = "mtbCuil";
+            mtbCuil.Size = new Size(146, 37);
+            mtbCuil.TabIndex = 9;
+            mtbCuil.MaskInputRejected += maskedTextBox1_MaskInputRejected;
+            // 
+            // btnVercontrasena
+            // 
+            btnVercontrasena.Image = (Image)resources.GetObject("btnVercontrasena.Image");
+            btnVercontrasena.Location = new Point(557, 173);
+            btnVercontrasena.Name = "btnVercontrasena";
+            btnVercontrasena.Size = new Size(60, 49);
+            btnVercontrasena.TabIndex = 10;
+            btnVercontrasena.UseVisualStyleBackColor = true;
+            btnVercontrasena.Click += button3_Click;
+            // 
+            // btnVerRepetir
+            // 
+            btnVerRepetir.Image = (Image)resources.GetObject("btnVerRepetir.Image");
+            btnVerRepetir.Location = new Point(557, 234);
+            btnVerRepetir.Name = "btnVerRepetir";
+            btnVerRepetir.Size = new Size(60, 50);
+            btnVerRepetir.TabIndex = 11;
+            btnVerRepetir.UseVisualStyleBackColor = true;
+            btnVerRepetir.Click += btnVerRepetir_Click;
             // 
             // Registroform
             // 
             AutoScaleDimensions = new SizeF(13F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(628, 395);
-            Controls.Add(maskedTextBox1);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
+            ClientSize = new Size(639, 395);
+            Controls.Add(btnVerRepetir);
+            Controls.Add(btnVercontrasena);
+            Controls.Add(mtbCuil);
+            Controls.Add(btnVolverlogin);
+            Controls.Add(btnRegistrar);
+            Controls.Add(txtRepetirContrasena);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(txtContrasena);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -149,11 +178,13 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox3;
+        private TextBox txtContrasena;
+        private TextBox txtRepetirContrasena;
         private Label label4;
-        private Button button1;
-        private Button button2;
-        private MaskedTextBox maskedTextBox1;
+        private Button btnRegistrar;
+        private Button btnVolverlogin;
+        private MaskedTextBox mtbCuil;
+        private Button btnVercontrasena;
+        private Button btnVerRepetir;
     }
 }
