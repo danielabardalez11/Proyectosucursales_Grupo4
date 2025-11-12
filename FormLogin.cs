@@ -32,19 +32,31 @@ namespace Proyectosucursales_Grupo4
         private void Btningresar_Click(object sender, EventArgs e)
         {
             if (maskedTextBox1.Text == "27-46211405-8" && txtcontraseña.Text == "12345")
-                {
-                 Formprincipal formLogin = new Formprincipal();
+            {
+                Formprincipal formLogin = new Formprincipal();
                 this.Hide();
                 formLogin.Show();
             }
             else
             {
-                MessageBox.Show("Usuario o Contraseña Incorrectos, Vuelva a Intentarlo"); 
+                MessageBox.Show("Usuario o Contraseña Incorrectos, Vuelva a Intentarlo");
                 maskedTextBox1.Clear();
-                txtcontraseña.Clear();  
+                txtcontraseña.Clear();
             }
-                   
-                    
+
+
+        }
+
+        private void lblbienvenido_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            Registroform registro = new(); 
+            registro.Show(); 
+            this.Hide(); 
         }
     }
 }
