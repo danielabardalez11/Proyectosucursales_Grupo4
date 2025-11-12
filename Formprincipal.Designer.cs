@@ -137,7 +137,7 @@
             tabPage1.Size = new Size(976, 514);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Informacion General";
-            tabPage1.Click += tabPage1_Click;
+            tabPage1.Click += TabPage1_Click;
             // 
             // dateTimePicker3
             // 
@@ -163,7 +163,7 @@
             button2.TabIndex = 29;
             button2.Text = "Cerrar";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            button2.Click += Button2_Click;
             // 
             // textBox7
             // 
@@ -218,7 +218,7 @@
             label13.Size = new Size(107, 30);
             label13.TabIndex = 23;
             label13.Text = "Localidad";
-            label13.Click += label13_Click;
+            label13.Click += Label13_Click;
             // 
             // label12
             // 
@@ -267,7 +267,7 @@
             label10.TabIndex = 18;
             label10.Text = "N° Sucursal";
             label10.TextAlign = ContentAlignment.TopCenter;
-            label10.Click += label10_Click;
+            label10.Click += Label10_Click;
             // 
             // label9
             // 
@@ -305,7 +305,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(182, 36);
             comboBox1.TabIndex = 12;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            comboBox1.SelectedIndexChanged += ComboBox1_SelectedIndexChanged;
             // 
             // button1
             // 
@@ -343,7 +343,7 @@
             label5.Size = new Size(103, 30);
             label5.TabIndex = 7;
             label5.Text = "📧 Email";
-            label5.Click += label5_Click;
+            label5.Click += Label5_Click;
             // 
             // textBox3
             // 
@@ -379,7 +379,7 @@
             label3.Size = new Size(99, 30);
             label3.TabIndex = 3;
             label3.Text = "📍 Calle";
-            label3.Click += label3_Click;
+            label3.Click += Label3_Click;
             // 
             // textBox1
             // 
@@ -545,7 +545,7 @@
             label18.Size = new Size(116, 30);
             label18.TabIndex = 3;
             label18.Text = "Empleado:";
-            label18.Click += label18_Click;
+            label18.Click += Label18_Click;
             // 
             // label17
             // 
@@ -556,7 +556,7 @@
             label17.Size = new Size(100, 30);
             label17.TabIndex = 1;
             label17.Text = "Sucursal:";
-            label17.Click += label17_Click;
+            label17.Click += Label17_Click;
             // 
             // label16
             // 
