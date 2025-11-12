@@ -54,9 +54,21 @@ namespace Proyectosucursales_Grupo4
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            Registroform registro = new(); 
-            registro.Show(); 
-            this.Hide(); 
+            Registroform registro = new();
+            registro.Show();
+            this.Hide();
+        }
+
+        private void lblcontraseña_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVerContraLogin_Click(object sender, EventArgs e)
+        {
+            // Alterna la visibilidad de la contraseña
+            txtcontraseña.UseSystemPasswordChar = !txtcontraseña.UseSystemPasswordChar;
         }
     }
 }
+

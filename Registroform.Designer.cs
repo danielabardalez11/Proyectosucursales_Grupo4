@@ -49,9 +49,9 @@
             label1.Location = new Point(239, 55);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(140, 47);
+            label1.Size = new Size(165, 47);
             label1.TabIndex = 0;
-            label1.Text = "Registro";
+            label1.Text = "Registrate";
             label1.Click += label1_Click;
             // 
             // label2
@@ -76,29 +76,32 @@
             // 
             // txtContrasena
             // 
+            txtContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtContrasena.Location = new Point(278, 209);
             txtContrasena.Margin = new Padding(3, 4, 3, 4);
             txtContrasena.Name = "txtContrasena";
             txtContrasena.PlaceholderText = "Ingrese contraseña";
-            txtContrasena.Size = new Size(259, 38);
+            txtContrasena.Size = new Size(259, 39);
             txtContrasena.TabIndex = 3;
             txtContrasena.UseSystemPasswordChar = true;
             // 
             // txtRepetirContrasena
             // 
+            txtRepetirContrasena.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtRepetirContrasena.Location = new Point(278, 281);
             txtRepetirContrasena.Margin = new Padding(3, 4, 3, 4);
             txtRepetirContrasena.Name = "txtRepetirContrasena";
             txtRepetirContrasena.PlaceholderText = "Repita contraseña";
-            txtRepetirContrasena.Size = new Size(259, 38);
+            txtRepetirContrasena.Size = new Size(259, 39);
             txtRepetirContrasena.TabIndex = 6;
             txtRepetirContrasena.UseSystemPasswordChar = true;
+            txtRepetirContrasena.TextChanged += txtRepetirContrasena_TextChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Sitka Banner", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(3, 281);
+            label4.Location = new Point(12, 280);
             label4.Name = "label4";
             label4.Size = new Size(269, 40);
             label4.TabIndex = 5;
@@ -110,7 +113,7 @@
             btnRegistrar.Location = new Point(120, 363);
             btnRegistrar.Margin = new Padding(3, 4, 3, 4);
             btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(131, 48);
+            btnRegistrar.Size = new Size(145, 48);
             btnRegistrar.TabIndex = 7;
             btnRegistrar.Text = "Registrar";
             btnRegistrar.UseVisualStyleBackColor = true;
@@ -129,11 +132,12 @@
             // 
             // mtbCuil
             // 
+            mtbCuil.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mtbCuil.Location = new Point(278, 141);
             mtbCuil.Margin = new Padding(3, 4, 3, 4);
             mtbCuil.Mask = "00-00000000-0";
             mtbCuil.Name = "mtbCuil";
-            mtbCuil.Size = new Size(168, 38);
+            mtbCuil.Size = new Size(168, 39);
             mtbCuil.TabIndex = 9;
             mtbCuil.MaskInputRejected += maskedTextBox1_MaskInputRejected;
             // 
@@ -163,7 +167,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 35F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SkyBlue;
+            BackColor = Color.LightGreen;
             ClientSize = new Size(639, 432);
             Controls.Add(btnVerRepetir);
             Controls.Add(btnVercontrasena);

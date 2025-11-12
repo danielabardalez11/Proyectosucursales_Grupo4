@@ -58,18 +58,17 @@ namespace Proyectosucursales_Grupo4
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
-            // (Opcional) Verifica que la contraseña tenga cierta longitud mínima
-            if (txtContrasena.Text.Length < 6)
-            {
-                MessageBox.Show("La contraseña debe tener al menos 6 caracteres.",
-                                "Contraseña débil", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
             // Si todo está bien
             MessageBox.Show("Usuario registrado correctamente",
                             "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            // 🔹 Limpia todos los campos
+            LimpiarCampos();
+        }
+        private void LimpiarCampos()
+        {
+            mtbCuil.Text = "";
+            txtContrasena.Text = "";
+            txtRepetirContrasena.Text = "";
         }
 
         private void btnVolverlogin_Click(object sender, EventArgs e)
@@ -90,6 +89,11 @@ namespace Proyectosucursales_Grupo4
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtRepetirContrasena_TextChanged(object sender, EventArgs e)
         {
 
         }
