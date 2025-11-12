@@ -72,6 +72,27 @@ namespace Proyectosucursales_Grupo4
                             "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        private void btnVolverlogin_Click(object sender, EventArgs e)
+        {
+            // Crear una nueva instancia del formulario de login
+            FormLogin formLogin = new FormLogin();
+
+            // Mostrar el login
+            formLogin.Show();
+
+            // Cerrar el formulario actual
+            this.Close();
+        }
+
+        private void Registroform_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
