@@ -31,9 +31,11 @@ namespace Proyectosucursales_Grupo4
 
         private void Btningresar_Click(object sender, EventArgs e)
         {
-            if (maskedTextBox1.Text == "27-46211405-8" && txtcontraseña.Text == "12345")
+            if ((maskedTextBox1.Text == "27-46211405-8" && txtcontraseña.Text == "12345") ||
+                (maskedTextBox1.Text == "27-47804068-2" && txtcontraseña.Text == "dani") ||
+                (maskedTextBox1.Text == "00-00000000-0" && txtcontraseña.Text == "0000"))
             {
-                Formprincipal formLogin = new Formprincipal();
+                CrudSucursales formLogin = new CrudSucursales();
                 this.Hide();
                 formLogin.Show();
             }
