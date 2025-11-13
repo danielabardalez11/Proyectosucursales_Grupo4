@@ -168,9 +168,14 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+<<<<<<< HEAD
             BackColor = Color.FromArgb(141, 215, 254);
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(534, 638);
+=======
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(400, 458);
+>>>>>>> actualizacion diseño
             Controls.Add(btnRegistro);
             Controls.Add(label1);
             Controls.Add(label3);
