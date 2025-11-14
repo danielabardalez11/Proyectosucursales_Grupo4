@@ -77,5 +77,24 @@ namespace Proyectosucursales_Grupo4
         {
             Close();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Formprincipal agregar = new Formprincipal();
+
+            if (agregar.ShowDialog() == DialogResult.OK)
+            {
+                dataGridView1.Rows.Add(
+                    agregar.NumeroSucursal,
+                    agregar.Nombre,
+                    agregar.FechaApertura,
+                    agregar.Telefono,
+                    agregar.Calle,
+                    agregar.NumeroDir,
+                    agregar.Localidad,
+                    agregar.Provincia
+                );
+            }
+        }
     }
 }

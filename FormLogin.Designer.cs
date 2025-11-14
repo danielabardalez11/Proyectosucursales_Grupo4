@@ -32,7 +32,6 @@
             lblcuil = new Label();
             lblcontraseña = new Label();
             txtcontraseña = new TextBox();
-            pictureBox1 = new PictureBox();
             maskedTextBox1 = new MaskedTextBox();
             btningresar = new Button();
             btnVerContraLogin = new Button();
@@ -40,71 +39,61 @@
             label3 = new Label();
             btnRegistro = new Button();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // lblcuil
             // 
             lblcuil.AutoSize = true;
-            lblcuil.Font = new Font("Sitka Small", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            lblcuil.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblcuil.ForeColor = SystemColors.ActiveCaptionText;
-            lblcuil.Location = new Point(92, 295);
+            lblcuil.Location = new Point(66, 157);
             lblcuil.Margin = new Padding(4, 0, 4, 0);
             lblcuil.Name = "lblcuil";
-            lblcuil.Size = new Size(85, 40);
+            lblcuil.Size = new Size(65, 32);
             lblcuil.TabIndex = 0;
             lblcuil.Text = "CUIL";
             // 
             // lblcontraseña
             // 
             lblcontraseña.AutoSize = true;
-            lblcontraseña.Font = new Font("Sitka Small", 14F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblcontraseña.Location = new Point(92, 384);
+            lblcontraseña.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
+            lblcontraseña.Location = new Point(66, 284);
             lblcontraseña.Margin = new Padding(4, 0, 4, 0);
             lblcontraseña.Name = "lblcontraseña";
-            lblcontraseña.Size = new Size(173, 40);
+            lblcontraseña.Size = new Size(138, 32);
             lblcontraseña.TabIndex = 1;
             lblcontraseña.Text = "Contraseña";
             lblcontraseña.Click += lblcontraseña_Click;
             // 
             // txtcontraseña
             // 
-            txtcontraseña.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtcontraseña.Location = new Point(156, 429);
+            txtcontraseña.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtcontraseña.Location = new Point(134, 321);
             txtcontraseña.Margin = new Padding(4, 5, 4, 5);
             txtcontraseña.Name = "txtcontraseña";
             txtcontraseña.PlaceholderText = "Escriba su Contraseña";
-            txtcontraseña.Size = new Size(256, 39);
+            txtcontraseña.Size = new Size(256, 42);
             txtcontraseña.TabIndex = 2;
             txtcontraseña.UseSystemPasswordChar = true;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.AccessibleRole = AccessibleRole.Cursor;
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(92, 81);
-            pictureBox1.Margin = new Padding(4, 5, 4, 5);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(335, 196);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 4;
-            pictureBox1.TabStop = false;
-            // 
             // maskedTextBox1
             // 
-            maskedTextBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            maskedTextBox1.Location = new Point(156, 340);
+            maskedTextBox1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            maskedTextBox1.Location = new Point(134, 197);
             maskedTextBox1.Margin = new Padding(4, 5, 4, 5);
             maskedTextBox1.Mask = "00-00000000-0";
             maskedTextBox1.Name = "maskedTextBox1";
-            maskedTextBox1.Size = new Size(196, 39);
+            maskedTextBox1.Size = new Size(225, 42);
             maskedTextBox1.TabIndex = 5;
             // 
             // btningresar
             // 
-            btningresar.Font = new Font("Sitka Small", 12F, FontStyle.Bold);
-            btningresar.Location = new Point(180, 497);
+            btningresar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btningresar.Location = new Point(180, 392);
             btningresar.Margin = new Padding(4, 5, 4, 5);
             btningresar.Name = "btningresar";
             btningresar.Size = new Size(150, 67);
@@ -116,9 +105,9 @@
             // btnVerContraLogin
             // 
             btnVerContraLogin.Image = (Image)resources.GetObject("btnVerContraLogin.Image");
-            btnVerContraLogin.Location = new Point(419, 425);
+            btnVerContraLogin.Location = new Point(397, 321);
             btnVerContraLogin.Name = "btnVerContraLogin";
-            btnVerContraLogin.Size = new Size(65, 51);
+            btnVerContraLogin.Size = new Size(65, 48);
             btnVerContraLogin.TabIndex = 10;
             btnVerContraLogin.UseVisualStyleBackColor = true;
             btnVerContraLogin.Click += btnVerContraLogin_Click;
@@ -126,10 +115,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 14F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label2.Location = new Point(163, 29);
+            label2.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.Location = new Point(134, 73);
             label2.Name = "label2";
-            label2.Size = new Size(189, 32);
+            label2.Size = new Size(246, 54);
             label2.TabIndex = 12;
             label2.Text = "Inicia Sesión";
             // 
@@ -143,12 +132,13 @@
             // 
             // btnRegistro
             // 
-            btnRegistro.BackColor = Color.GreenYellow;
-            btnRegistro.Font = new Font("Sitka Small", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegistro.Location = new Point(346, 581);
+            btnRegistro.BackColor = Color.FromArgb(0, 51, 102);
+            btnRegistro.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistro.ForeColor = SystemColors.ButtonHighlight;
+            btnRegistro.Location = new Point(171, 511);
             btnRegistro.Margin = new Padding(4, 5, 4, 5);
             btnRegistro.Name = "btnRegistro";
-            btnRegistro.Size = new Size(169, 41);
+            btnRegistro.Size = new Size(174, 49);
             btnRegistro.TabIndex = 9;
             btnRegistro.Text = "Registrarse";
             btnRegistro.UseVisualStyleBackColor = false;
@@ -157,20 +147,44 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 587);
+            label1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label1.Location = new Point(66, 474);
             label1.Name = "label1";
-            label1.Size = new Size(318, 28);
+            label1.Size = new Size(387, 32);
             label1.TabIndex = 11;
             label1.Text = "Haz clic aqui para crear tu cuenta!";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(516, -5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(591, 625);
+            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
+            pictureBox2.TabIndex = 14;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackColor = Color.White;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(628, 157);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(357, 267);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 15;
+            pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // FormLogin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(141, 215, 254);
+            BackColor = Color.FromArgb(242, 242, 242);
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(534, 638);
+            ClientSize = new Size(1102, 600);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(btnRegistro);
             Controls.Add(label1);
             Controls.Add(label3);
@@ -178,17 +192,18 @@
             Controls.Add(btnVerContraLogin);
             Controls.Add(btningresar);
             Controls.Add(maskedTextBox1);
-            Controls.Add(pictureBox1);
             Controls.Add(txtcontraseña);
             Controls.Add(lblcontraseña);
             Controls.Add(lblcuil);
+            Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 5, 4, 5);
             Name = "FormLogin";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Inicio ";
+            Text = " Inicia Sesion";
             Load += FormLogin_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,7 +213,6 @@
         private Label lblcuil;
         private Label lblcontraseña;
         private TextBox txtcontraseña;
-        private PictureBox pictureBox1;
         private MaskedTextBox maskedTextBox1;
         private Button btningresar;
         private Button btnVerContraLogin;
@@ -206,5 +220,7 @@
         private Label label3;
         private Button btnRegistro;
         private Label label1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

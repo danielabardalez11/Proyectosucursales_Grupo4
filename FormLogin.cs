@@ -71,6 +71,11 @@ namespace Proyectosucursales_Grupo4
             // Alterna la visibilidad de la contraseña
             txtcontraseña.UseSystemPasswordChar = !txtcontraseña.UseSystemPasswordChar;
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

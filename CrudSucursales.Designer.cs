@@ -52,7 +52,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.Navy;
+            panel1.BackColor = Color.FromArgb(0, 51, 102);
             panel1.Controls.Add(btnCerrarSesion);
             panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(btnModificar);
@@ -128,6 +128,7 @@
             btnAgregar.Text = "Agregar";
             btnAgregar.TextAlign = ContentAlignment.MiddleRight;
             btnAgregar.UseVisualStyleBackColor = false;
+            btnAgregar.Click += btnAgregar_Click;
             // 
             // label1
             // 
