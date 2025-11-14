@@ -50,7 +50,7 @@
             lblcuil.AutoSize = true;
             lblcuil.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             lblcuil.ForeColor = SystemColors.ActiveCaptionText;
-            lblcuil.Location = new Point(66, 157);
+            lblcuil.Location = new Point(66, 160);
             lblcuil.Margin = new Padding(4, 0, 4, 0);
             lblcuil.Name = "lblcuil";
             lblcuil.Size = new Size(65, 32);
@@ -79,6 +79,7 @@
             txtcontraseña.Size = new Size(256, 42);
             txtcontraseña.TabIndex = 2;
             txtcontraseña.UseSystemPasswordChar = true;
+            txtcontraseña.TextChanged += txtcontraseña_TextChanged;
             // 
             // maskedTextBox1
             // 
@@ -93,6 +94,7 @@
             // btningresar
             // 
             btningresar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btningresar.ForeColor = Color.FromArgb(0, 51, 102);
             btningresar.Location = new Point(180, 392);
             btningresar.Margin = new Padding(4, 5, 4, 5);
             btningresar.Name = "btningresar";
@@ -115,10 +117,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(0, 51, 102);
             label2.Location = new Point(134, 73);
             label2.Name = "label2";
-            label2.Size = new Size(246, 54);
+            label2.Size = new Size(255, 54);
             label2.TabIndex = 12;
             label2.Text = "Inicia Sesión";
             // 

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrudSucursales));
             panel1 = new Panel();
+            pictureBox2 = new PictureBox();
             btnCerrarSesion = new Button();
             btnEliminar = new Button();
             btnModificar = new Button();
@@ -46,6 +47,7 @@
             LocalidadSucursal = new DataGridViewTextBoxColumn();
             ProvinciaSucursal = new DataGridViewTextBoxColumn();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -53,6 +55,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(0, 51, 102);
+            panel1.Controls.Add(pictureBox2);
             panel1.Controls.Add(btnCerrarSesion);
             panel1.Controls.Add(btnEliminar);
             panel1.Controls.Add(btnModificar);
@@ -65,10 +68,21 @@
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(98, 606);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(101, 69);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 6;
+            pictureBox2.TabStop = false;
+            // 
             // btnCerrarSesion
             // 
             btnCerrarSesion.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCerrarSesion.Location = new Point(41, 578);
+            btnCerrarSesion.Location = new Point(39, 551);
             btnCerrarSesion.Name = "btnCerrarSesion";
             btnCerrarSesion.Size = new Size(224, 49);
             btnCerrarSesion.TabIndex = 5;
@@ -226,10 +240,12 @@
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Name = "CrudSucursales";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CrudSucursales";
             Load += CrudSucursales_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -253,5 +269,6 @@
         private DataGridViewTextBoxColumn NumCalleSucursal;
         private DataGridViewTextBoxColumn LocalidadSucursal;
         private DataGridViewTextBoxColumn ProvinciaSucursal;
+        private PictureBox pictureBox2;
     }
 }

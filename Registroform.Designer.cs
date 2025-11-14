@@ -45,11 +45,12 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Sitka Heading", 16F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
-            label1.Location = new Point(239, 55);
+            label1.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(0, 51, 102);
+            label1.Location = new Point(221, 54);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(165, 47);
+            label1.Size = new Size(204, 54);
             label1.TabIndex = 0;
             label1.Text = "Registrate";
             label1.Click += label1_Click;
@@ -57,20 +58,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Sitka Banner", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label2.Location = new Point(103, 139);
             label2.Name = "label2";
-            label2.Size = new Size(74, 40);
+            label2.Size = new Size(65, 32);
             label2.TabIndex = 1;
             label2.Text = "CUIL";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Sitka Banner", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label3.Location = new Point(74, 207);
             label3.Name = "label3";
-            label3.Size = new Size(145, 40);
+            label3.Size = new Size(138, 32);
             label3.TabIndex = 2;
             label3.Text = "Contraseña";
             // 
@@ -100,27 +101,32 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Sitka Banner", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold);
             label4.Location = new Point(12, 280);
             label4.Name = "label4";
-            label4.Size = new Size(269, 40);
+            label4.Size = new Size(254, 32);
             label4.TabIndex = 5;
             label4.Text = "Confirmar Contraseña";
             label4.Click += label4_Click;
             // 
             // btnRegistrar
             // 
+            btnRegistrar.BackColor = Color.FromArgb(0, 51, 102);
+            btnRegistrar.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrar.ForeColor = Color.White;
             btnRegistrar.Location = new Point(120, 363);
             btnRegistrar.Margin = new Padding(3, 4, 3, 4);
             btnRegistrar.Name = "btnRegistrar";
             btnRegistrar.Size = new Size(145, 48);
             btnRegistrar.TabIndex = 7;
             btnRegistrar.Text = "Registrar";
-            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.UseVisualStyleBackColor = false;
             btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnVolverlogin
             // 
+            btnVolverlogin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnVolverlogin.ForeColor = Color.FromArgb(0, 51, 102);
             btnVolverlogin.Location = new Point(344, 363);
             btnVolverlogin.Margin = new Padding(3, 4, 3, 4);
             btnVolverlogin.Name = "btnVolverlogin";
@@ -147,7 +153,7 @@
             btnVercontrasena.Location = new Point(557, 202);
             btnVercontrasena.Margin = new Padding(3, 4, 3, 4);
             btnVercontrasena.Name = "btnVercontrasena";
-            btnVercontrasena.Size = new Size(60, 57);
+            btnVercontrasena.Size = new Size(60, 46);
             btnVercontrasena.TabIndex = 10;
             btnVercontrasena.UseVisualStyleBackColor = true;
             btnVercontrasena.Click += button3_Click;
@@ -158,7 +164,7 @@
             btnVerRepetir.Location = new Point(557, 273);
             btnVerRepetir.Margin = new Padding(3, 4, 3, 4);
             btnVerRepetir.Name = "btnVerRepetir";
-            btnVerRepetir.Size = new Size(60, 58);
+            btnVerRepetir.Size = new Size(60, 47);
             btnVerRepetir.TabIndex = 11;
             btnVerRepetir.UseVisualStyleBackColor = true;
             btnVerRepetir.Click += btnVerRepetir_Click;
@@ -167,8 +173,8 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 35F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.LightGreen;
-            ClientSize = new Size(639, 432);
+            BackColor = Color.FromArgb(221, 231, 245);
+            ClientSize = new Size(642, 439);
             Controls.Add(btnVerRepetir);
             Controls.Add(btnVercontrasena);
             Controls.Add(mtbCuil);

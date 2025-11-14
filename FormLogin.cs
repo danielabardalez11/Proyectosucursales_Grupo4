@@ -33,7 +33,7 @@ namespace Proyectosucursales_Grupo4
         {
             if ((maskedTextBox1.Text == "27-46211405-8" && txtcontraseña.Text == "12345") ||
                 (maskedTextBox1.Text == "27-47804068-2" && txtcontraseña.Text == "dani") ||
-                (maskedTextBox1.Text == "00-00000000-0" && txtcontraseña.Text == "0000"))
+                (maskedTextBox1.Text == "00-00000000-0" && txtcontraseña.Text == "00000"))
             {
                 CrudSucursales formLogin = new CrudSucursales();
                 this.Hide();
@@ -73,6 +73,11 @@ namespace Proyectosucursales_Grupo4
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcontraseña_TextChanged(object sender, EventArgs e)
         {
 
         }
