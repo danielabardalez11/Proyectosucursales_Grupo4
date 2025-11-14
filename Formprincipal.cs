@@ -9,7 +9,14 @@ namespace Proyectosucursales_Grupo4
 
         private void Formprincipal_Load(object sender, EventArgs e)
         {
-
+            public string NumeroSucursal { get; set; }
+        public string Nombre { get; set; }
+        public string FechaApertura { get; set; }
+        public string Telefono { get; set; }
+        public string Calle { get; set; }
+        public string NumeroDir { get; set; }
+        public string Localidad { get; set; }
+        public string Provincia { get; set; }
         }
 
         private void SalirToolStripMenuItem_Click(object sender, EventArgs e)
