@@ -59,5 +59,15 @@ namespace Proyectosucursales_Grupo4.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mansion_bulding_city_icon_238296 {
+            get {
+                object obj = ResourceManager.GetObject("mansion_bulding_city_icon_238296", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
