@@ -38,14 +38,15 @@
             label1 = new Label();
             pictureBox1 = new PictureBox();
             dataGridView1 = new DataGridView();
-            NumSucursal = new DataGridViewTextBoxColumn();
-            NombreSucursal = new DataGridViewTextBoxColumn();
-            FechaSucursal = new DataGridViewTextBoxColumn();
-            TelefonoSucursal = new DataGridViewTextBoxColumn();
-            CalleSucursal = new DataGridViewTextBoxColumn();
-            NumCalleSucursal = new DataGridViewTextBoxColumn();
-            LocalidadSucursal = new DataGridViewTextBoxColumn();
-            ProvinciaSucursal = new DataGridViewTextBoxColumn();
+            colNumero = new DataGridViewTextBoxColumn();
+            colNombre = new DataGridViewTextBoxColumn();
+            colFechaApertura = new DataGridViewTextBoxColumn();
+            colTelefono = new DataGridViewTextBoxColumn();
+            colCalle = new DataGridViewTextBoxColumn();
+            colNumeroDir = new DataGridViewTextBoxColumn();
+            colLocalidad = new DataGridViewTextBoxColumn();
+            colProvincia = new DataGridViewTextBoxColumn();
+            cmbFiltrar = new ComboBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -168,80 +169,94 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { NumSucursal, NombreSucursal, FechaSucursal, TelefonoSucursal, CalleSucursal, NumCalleSucursal, LocalidadSucursal, ProvinciaSucursal });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { colNumero, colNombre, colFechaApertura, colTelefono, colCalle, colNumeroDir, colLocalidad, colProvincia });
             dataGridView1.Location = new Point(307, 72);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(1077, 543);
+            dataGridView1.Size = new Size(1053, 610);
             dataGridView1.TabIndex = 1;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // NumSucursal
+            // colNumero
             // 
-            NumSucursal.HeaderText = "N°";
-            NumSucursal.MinimumWidth = 8;
-            NumSucursal.Name = "NumSucursal";
-            NumSucursal.Width = 60;
+            colNumero.HeaderText = "N°";
+            colNumero.MinimumWidth = 8;
+            colNumero.Name = "colNumero";
+            colNumero.Width = 60;
             // 
-            // NombreSucursal
+            // colNombre
             // 
-            NombreSucursal.HeaderText = "Nombre";
-            NombreSucursal.MinimumWidth = 8;
-            NombreSucursal.Name = "NombreSucursal";
-            NombreSucursal.Width = 170;
+            colNombre.HeaderText = "Nombre";
+            colNombre.MinimumWidth = 8;
+            colNombre.Name = "colNombre";
+            colNombre.Width = 170;
             // 
-            // FechaSucursal
+            // colFechaApertura
             // 
-            FechaSucursal.HeaderText = "Fecha Apertura";
-            FechaSucursal.MinimumWidth = 8;
-            FechaSucursal.Name = "FechaSucursal";
-            FechaSucursal.Width = 110;
+            colFechaApertura.HeaderText = "Fecha Apertura";
+            colFechaApertura.MinimumWidth = 8;
+            colFechaApertura.Name = "colFechaApertura";
+            colFechaApertura.Width = 110;
             // 
-            // TelefonoSucursal
+            // colTelefono
             // 
-            TelefonoSucursal.HeaderText = "Teléfono";
-            TelefonoSucursal.MinimumWidth = 8;
-            TelefonoSucursal.Name = "TelefonoSucursal";
-            TelefonoSucursal.Width = 130;
+            colTelefono.HeaderText = "Teléfono";
+            colTelefono.MinimumWidth = 8;
+            colTelefono.Name = "colTelefono";
+            colTelefono.Width = 130;
             // 
-            // CalleSucursal
+            // colCalle
             // 
-            CalleSucursal.HeaderText = "Calle";
-            CalleSucursal.MinimumWidth = 8;
-            CalleSucursal.Name = "CalleSucursal";
-            CalleSucursal.Width = 160;
+            colCalle.HeaderText = "Calle";
+            colCalle.MinimumWidth = 8;
+            colCalle.Name = "colCalle";
+            colCalle.Width = 160;
             // 
-            // NumCalleSucursal
+            // colNumeroDir
             // 
-            NumCalleSucursal.HeaderText = "N° Calle";
-            NumCalleSucursal.MinimumWidth = 8;
-            NumCalleSucursal.Name = "NumCalleSucursal";
-            NumCalleSucursal.Width = 70;
+            colNumeroDir.HeaderText = "N° Calle";
+            colNumeroDir.MinimumWidth = 8;
+            colNumeroDir.Name = "colNumeroDir";
+            colNumeroDir.Width = 70;
             // 
-            // LocalidadSucursal
+            // colLocalidad
             // 
-            LocalidadSucursal.HeaderText = "Localidad";
-            LocalidadSucursal.MinimumWidth = 8;
-            LocalidadSucursal.Name = "LocalidadSucursal";
-            LocalidadSucursal.Width = 140;
+            colLocalidad.HeaderText = "Localidad";
+            colLocalidad.MinimumWidth = 8;
+            colLocalidad.Name = "colLocalidad";
+            colLocalidad.Width = 140;
             // 
-            // ProvinciaSucursal
+            // colProvincia
             // 
-            ProvinciaSucursal.HeaderText = "Provincia";
-            ProvinciaSucursal.MinimumWidth = 8;
-            ProvinciaSucursal.Name = "ProvinciaSucursal";
-            ProvinciaSucursal.Width = 140;
+            colProvincia.HeaderText = "Provincia";
+            colProvincia.MinimumWidth = 8;
+            colProvincia.Name = "colProvincia";
+            colProvincia.Width = 140;
+            // 
+            // cmbFiltrar
+            // 
+            cmbFiltrar.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmbFiltrar.FormattingEnabled = true;
+            cmbFiltrar.Items.AddRange(new object[] { "Buenos Aires", "Catamarca", "Chaco", "Chubut", "Córdoba", "Corrientes", "Entre Ríos", "Formosa", "Jujuy", "La Pampa", "La Rioja", "Mendoza", "Misiones", "Neuquén", "Río Negro", "Salta", "San Juan", "San Luis", "Santa Cruz", "Santa Fe", "Santiago del Estero", "Tierra del Fuego", "Todas", "Tucumán" });
+            cmbFiltrar.Location = new Point(1049, 12);
+            cmbFiltrar.Name = "cmbFiltrar";
+            cmbFiltrar.Size = new Size(297, 38);
+            cmbFiltrar.TabIndex = 2;
+            cmbFiltrar.Text = "Filtrar por Provincia";
+            cmbFiltrar.SelectedIndexChanged += cmbFiltrar_SelectedIndexChanged;
             // 
             // CrudSucursales
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1387, 682);
+            ClientSize = new Size(1358, 682);
+            Controls.Add(cmbFiltrar);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CrudSucursales";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "CrudSucursales";
+            Text = " Gestion de Sucursales";
             Load += CrudSucursales_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -261,14 +276,15 @@
         private Button btnAgregar;
         private Label label1;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn NumSucursal;
-        private DataGridViewTextBoxColumn NombreSucursal;
-        private DataGridViewTextBoxColumn FechaSucursal;
-        private DataGridViewTextBoxColumn TelefonoSucursal;
-        private DataGridViewTextBoxColumn CalleSucursal;
-        private DataGridViewTextBoxColumn NumCalleSucursal;
-        private DataGridViewTextBoxColumn LocalidadSucursal;
-        private DataGridViewTextBoxColumn ProvinciaSucursal;
         private PictureBox pictureBox2;
+        private DataGridViewTextBoxColumn colNumero;
+        private DataGridViewTextBoxColumn colNombre;
+        private DataGridViewTextBoxColumn colFechaApertura;
+        private DataGridViewTextBoxColumn colTelefono;
+        private DataGridViewTextBoxColumn colCalle;
+        private DataGridViewTextBoxColumn colNumeroDir;
+        private DataGridViewTextBoxColumn colLocalidad;
+        private DataGridViewTextBoxColumn colProvincia;
+        private ComboBox cmbFiltrar;
     }
 }

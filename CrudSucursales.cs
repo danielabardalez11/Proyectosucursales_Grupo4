@@ -24,12 +24,68 @@ namespace Proyectosucursales_Grupo4
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
+            // Comprueba que hay una fila seleccionada
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione la sucursal a editar.");
+                return;
+            }
 
+            // Toma la primera fila seleccionada
+            DataGridViewRow fila = dataGridView1.SelectedRows[0];
+
+            // Crea el formulario y precargar las propiedades
+            using (Formprincipal editar = new Formprincipal())
+            {
+                editar.NumeroSucursal = fila.Cells["colNumero"].Value?.ToString();
+                editar.Nombre = fila.Cells["colNombre"].Value?.ToString();
+                editar.FechaApertura = fila.Cells["colFechaApertura"].Value?.ToString();
+                editar.Telefono = fila.Cells["colTelefono"].Value?.ToString();
+                editar.Calle = fila.Cells["colCalle"].Value?.ToString();
+                editar.NumeroDir = fila.Cells["colNumeroDir"].Value?.ToString();
+                editar.Localidad = fila.Cells["colLocalidad"].Value?.ToString();
+                editar.Provincia = fila.Cells["colProvincia"].Value?.ToString();
+
+                // Carga esos valores en los controles del form
+                editar.CargarValoresEnControles();
+
+                // Mostrar modal para editar
+                if (editar.ShowDialog() == DialogResult.OK)
+                {
+                    // Actualiza la fila con las propiedades modificadas
+                    fila.Cells["colNumero"].Value = editar.NumeroSucursal;
+                    fila.Cells["colNombre"].Value = editar.Nombre;
+                    fila.Cells["colFechaApertura"].Value = editar.FechaApertura;
+                    fila.Cells["colTelefono"].Value = editar.Telefono;
+                    fila.Cells["colCalle"].Value = editar.Calle;
+                    fila.Cells["colNumeroDir"].Value = editar.NumeroDir;
+                    fila.Cells["colLocalidad"].Value = editar.Localidad;
+                    fila.Cells["colProvincia"].Value = editar.Provincia;
+
+                    MessageBox.Show("Sucursal actualizada correctamente.");
+                }
+            }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dataGridView1.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Seleccione una sucursal para eliminar.");
+                return;
+            }
 
+            var confirmar = MessageBox.Show(
+                "¿Seguro que desea eliminar esta sucursal?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirmar == DialogResult.Yes)
+            {
+                dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,11 +116,11 @@ namespace Proyectosucursales_Grupo4
             dataGridView1.Rows.Add("019", "Sucursal Bahía Blanca", "10/01/2022", "291-455-6677", "Av. Alem", "1350", "Bahía Blanca", "Buenos Aires");
             dataGridView1.Rows.Add("020", "Sucursal Mar del Plata", "25/01/2023", "223-472-8899", "Av. Colón", "2100", "Mar del Plata", "Buenos Aires");
             dataGridView1.Rows.Add("021", "Sucursal Recoleta", "08/02/2021", "11-4372-5566", "Av. Santa Fe", "1820", "Recoleta", "CABA");
-            dataGridView1.Rows.Add("022", "Sucursal Lanús", "20/02/2022", "11-4246-7788", "Av. Hipólito Yrigoyen", "4600", "Lanús", "Buenos Aires");
-            dataGridView1.Rows.Add("023", "Sucursal Caseros", "05/03/2022", "11-4750-9922", "Av. San Martín", "2850", "Caseros", "Buenos Aires");
-            dataGridView1.Rows.Add("024", "Sucursal Boedo", "15/03/2020", "11-4931-4411", "Av. Boedo", "750", "Boedo", "CABA");
-            dataGridView1.Rows.Add("025", "Sucursal Vicente López", "28/03/2023", "11-4796-5533", "Av. Maipú", "3500", "Vicente López", "Buenos Aires");
-            dataGridView1.Rows.Add("026", "Sucursal Tigre", "10/04/2022", "11-4731-2299", "Av. Cazón", "950", "Tigre", "Buenos Aires");
+            dataGridView1.Rows.Add("022", "Sucursal Lanús", "20/02/2022", "1142467788", "Av. Hipólito Yrigoyen", "4600", "Lanús", "Buenos Aires");
+            dataGridView1.Rows.Add("023", "Sucursal Caseros", "05/03/2022", "1147509922", "Av. San Martín", "2850", "Caseros", "Buenos Aires");
+            dataGridView1.Rows.Add("024", "Sucursal Boedo", "15/03/2020", "1149314411", "Av. Boedo", "750", "Boedo", "CABA");
+            dataGridView1.Rows.Add("025", "Sucursal Vicente López", "28/03/2023", "1147965533", "Av. Maipú", "3500", "Vicente López", "Buenos Aires");
+            dataGridView1.Rows.Add("026", "Sucursal Tigre", "10/04/2022", "1147312299", "Av. Cazón", "950", "Tigre", "Buenos Aires");
 
 
 
@@ -80,20 +136,43 @@ namespace Proyectosucursales_Grupo4
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            Formprincipal agregar = new Formprincipal();
-
-           // if (agregar.ShowDialog() == DialogResult.OK)
+            using (Formprincipal agregar = new Formprincipal())
             {
-                //dataGridView1.Rows.Add(
-                   // agregar.NumeroSucursal,
-                    //agregar.Nombre,
-                    //agregar.FechaApertura,
-                    //agregar.Telefono,
-                    //agregar.Calle,
-                    //agregar.NumeroDir,
-                    //agregar.Localidad,
-                    //agregar.Provincia
-               // );
+                if (agregar.ShowDialog() == DialogResult.OK)
+                {
+                    dataGridView1.Rows.Add(
+                        agregar.NumeroSucursal,
+                        agregar.Nombre,
+                        agregar.FechaApertura,
+                        agregar.Telefono,
+                        agregar.Calle,
+                        agregar.NumeroDir,
+                        agregar.Localidad,
+                        agregar.Provincia
+                    );
+                }
+            }
+        }
+
+        private void cmbFiltrar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string provinciaSeleccionada = cmbFiltrar.Text;
+
+            foreach (DataGridViewRow fila in dataGridView1.Rows)
+            {
+                if (fila.IsNewRow)
+                    continue;  // ← EVITA EL ERROR
+
+                if (provinciaSeleccionada == "Todas" || provinciaSeleccionada == "")
+                {
+                    fila.Visible = true;
+                }
+                else
+                {
+                    string provinciaFila = fila.Cells["colProvincia"].Value?.ToString();
+
+                    fila.Visible = (provinciaFila == provinciaSeleccionada);
+                }
             }
         }
     }
