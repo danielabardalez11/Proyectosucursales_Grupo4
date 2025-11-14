@@ -161,7 +161,7 @@ namespace Proyectosucursales_Grupo4
             foreach (DataGridViewRow fila in dataGridView1.Rows)
             {
                 if (fila.IsNewRow)
-                    continue;  // ← EVITA EL ERROR
+                    continue;  
 
                 if (provinciaSeleccionada == "Todas" || provinciaSeleccionada == "")
                 {
